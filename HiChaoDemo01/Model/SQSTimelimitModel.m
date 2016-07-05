@@ -15,8 +15,7 @@
     if (self) {
         
     [self setValuesForKeysWithDictionary:dataDic];
-        
-        
+                
     }
     return self;
     

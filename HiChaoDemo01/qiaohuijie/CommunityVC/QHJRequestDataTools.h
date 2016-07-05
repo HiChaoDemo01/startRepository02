@@ -10,4 +10,5 @@
 
 @interface QHJRequestDataTools : NSObject
 +(void)requestDataWithUrl:(NSString *)urlStr andWith:(ReturnValueBlock)block;
++(void)requestTableViewDataWithUrl:(NSString *)urlStr andWith:(ReturnValueBlock)block;
 @end
