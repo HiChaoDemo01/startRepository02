@@ -18,7 +18,12 @@
 + (void)sendRequestForMianVcTopScrollViewImage:(void(^)(NSArray *imageArray))complete;
 
 + (void)sendRequestForTimelimitInfo:(void(^)(NSArray *infoArr))complete;
+//发送请求各国商品数据
++ (void)sendRequestFroGoodsMessage:(void(^)(NSArray *messageArr))complete;
 
-
+//发送请求，获得首页的collectionView数据
++ (void)sendRequestFroCollectionViewData:(void(^)(NSArray *dataArr))complete;
+//发送请求，获得collectionView的头标题
++ (void)sendRequestFrocollectionViewHeaderTitile:(void(^)(NSArray *titleArr))complete;
 
 @end
