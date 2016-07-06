@@ -27,8 +27,11 @@
 #import "SQSRequest.h"
 #import "UIButton+WebCache.h"
 #import "SQSTimelimitModel.h"
-
-
+#import "GoodsMessageModel.h"
+#import "RegionModel.h"
+#import "SQSAction.h"
+#import "SQSComponent.h"
+#import "SQSItems.h"
 //QHJ 导入文件
 #import "CommunityScrollDataModel.h"
 #import "QHJRequestDataTools.h"

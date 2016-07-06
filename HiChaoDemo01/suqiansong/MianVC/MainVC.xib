@@ -18,11 +18,14 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bkf-O9-WDW">
                     <rect key="frame" x="-6" y="-11" width="420" height="730"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Yqi-cc-ge4"/>
+                    </connections>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-            <point key="canvasLocation" x="1179" y="211"/>
+            <point key="canvasLocation" x="411" y="213"/>
         </view>
     </objects>
 </document>

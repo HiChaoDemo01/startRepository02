@@ -10,6 +10,8 @@
 		0400442B1D2B5D6B008066AC /* SQSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0400442A1D2B5D6B008066AC /* SQSRequest.m */; };
 		0400442E1D2B5DE3008066AC /* SQSTimelimitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0400442D1D2B5DE3008066AC /* SQSTimelimitModel.m */; };
 		040044301D2B5E2B008066AC /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0400442F1D2B5E2B008066AC /* MainVC.xib */; };
+		040044331D2B7B04008066AC /* RegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040044321D2B7B04008066AC /* RegionModel.m */; };
+		040044361D2B7BC5008066AC /* GoodsMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040044351D2B7BC5008066AC /* GoodsMessageModel.m */; };
 		041F01501D28432900BD62E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F014F1D28432900BD62E0 /* main.m */; };
 		041F01531D28432900BD62E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F01521D28432900BD62E0 /* AppDelegate.m */; };
 		041F01591D28432900BD62E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F01571D28432900BD62E0 /* Main.storyboard */; };
@@ -46,6 +48,9 @@
 		041F02171D28E66100BD62E0 /* bottom_clothes_icon_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F02151D28E66100BD62E0 /* bottom_clothes_icon_on@2x.png */; };
 		042C8F3F1D2A013B00C290A3 /* CommunityScrollDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C8F3E1D2A013B00C290A3 /* CommunityScrollDataModel.m */; };
 		043359331D29048F00D0616E /* QHJRequestDataTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 043359321D29048F00D0616E /* QHJRequestDataTools.m */; };
+		04CB17B71D2C65F70051735E /* SQSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB17B61D2C65F70051735E /* SQSAction.m */; };
+		04CB17BA1D2C66010051735E /* SQSComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB17B91D2C66010051735E /* SQSComponent.m */; };
+		04CB17BD1D2C7E9F0051735E /* SQSItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CB17BC1D2C7E9F0051735E /* SQSItems.m */; };
 		C231E1DF442E6D062669E6DA /* libPods-HiChaoDemo01.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6F42804446A966B34441A0 /* libPods-HiChaoDemo01.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,10 @@
 		0400442C1D2B5DE3008066AC /* SQSTimelimitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSTimelimitModel.h; sourceTree = "<group>"; };
 		0400442D1D2B5DE3008066AC /* SQSTimelimitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSTimelimitModel.m; sourceTree = "<group>"; };
 		0400442F1D2B5E2B008066AC /* MainVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		040044311D2B7B04008066AC /* RegionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionModel.h; sourceTree = "<group>"; };
+		040044321D2B7B04008066AC /* RegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionModel.m; sourceTree = "<group>"; };
+		040044341D2B7BC5008066AC /* GoodsMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsMessageModel.h; sourceTree = "<group>"; };
+		040044351D2B7BC5008066AC /* GoodsMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsMessageModel.m; sourceTree = "<group>"; };
 		041F014B1D28432900BD62E0 /* HiChaoDemo01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiChaoDemo01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		041F014F1D28432900BD62E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		041F01511D28432900BD62E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +114,12 @@
 		042C8F3E1D2A013B00C290A3 /* CommunityScrollDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommunityScrollDataModel.m; path = HiChaoDemo01/qiaohuijie/CommunityVC/CommunityScrollDataModel.m; sourceTree = SOURCE_ROOT; };
 		043359311D29048F00D0616E /* QHJRequestDataTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QHJRequestDataTools.h; path = HiChaoDemo01/qiaohuijie/CommunityVC/QHJRequestDataTools.h; sourceTree = SOURCE_ROOT; };
 		043359321D29048F00D0616E /* QHJRequestDataTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QHJRequestDataTools.m; path = HiChaoDemo01/qiaohuijie/CommunityVC/QHJRequestDataTools.m; sourceTree = SOURCE_ROOT; };
+		04CB17B51D2C65F70051735E /* SQSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSAction.h; sourceTree = "<group>"; };
+		04CB17B61D2C65F70051735E /* SQSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSAction.m; sourceTree = "<group>"; };
+		04CB17B81D2C66010051735E /* SQSComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSComponent.h; sourceTree = "<group>"; };
+		04CB17B91D2C66010051735E /* SQSComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSComponent.m; sourceTree = "<group>"; };
+		04CB17BB1D2C7E9F0051735E /* SQSItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQSItems.h; sourceTree = "<group>"; };
+		04CB17BC1D2C7E9F0051735E /* SQSItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQSItems.m; sourceTree = "<group>"; };
 		2C6F42804446A966B34441A0 /* libPods-HiChaoDemo01.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HiChaoDemo01.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9BD70E5A4062C0CE47F14C /* Pods-HiChaoDemo01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiChaoDemo01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HiChaoDemo01/Pods-HiChaoDemo01.debug.xcconfig"; sourceTree = "<group>"; };
 		7ABED0AF800EF5DAB522BD68 /* Pods-HiChaoDemo01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HiChaoDemo01.release.xcconfig"; path = "Pods/Target Support Files/Pods-HiChaoDemo01/Pods-HiChaoDemo01.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,10 +189,20 @@
 		041F01651D28438E00BD62E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04CB17BB1D2C7E9F0051735E /* SQSItems.h */,
+				04CB17BC1D2C7E9F0051735E /* SQSItems.m */,
+				04CB17B51D2C65F70051735E /* SQSAction.h */,
+				04CB17B61D2C65F70051735E /* SQSAction.m */,
+				04CB17B81D2C66010051735E /* SQSComponent.h */,
+				04CB17B91D2C66010051735E /* SQSComponent.m */,
 				0400442C1D2B5DE3008066AC /* SQSTimelimitModel.h */,
 				0400442D1D2B5DE3008066AC /* SQSTimelimitModel.m */,
 				042C8F3D1D2A013B00C290A3 /* CommunityScrollDataModel.h */,
 				042C8F3E1D2A013B00C290A3 /* CommunityScrollDataModel.m */,
+				040044311D2B7B04008066AC /* RegionModel.h */,
+				040044321D2B7B04008066AC /* RegionModel.m */,
+				040044341D2B7BC5008066AC /* GoodsMessageModel.h */,
+				040044351D2B7BC5008066AC /* GoodsMessageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -502,15 +527,20 @@
 				0400442E1D2B5DE3008066AC /* SQSTimelimitModel.m in Sources */,
 				041F019E1D28954900BD62E0 /* ShoppingCarVC.m in Sources */,
 				041F01AD1D28960600BD62E0 /* MainVC.m in Sources */,
+				04CB17BA1D2C66010051735E /* SQSComponent.m in Sources */,
 				042C8F3F1D2A013B00C290A3 /* CommunityScrollDataModel.m in Sources */,
+				040044361D2B7BC5008066AC /* GoodsMessageModel.m in Sources */,
 				041F01531D28432900BD62E0 /* AppDelegate.m in Sources */,
 				041F019B1D28953700BD62E0 /* HiChaoVC.m in Sources */,
 				0400442B1D2B5D6B008066AC /* SQSRequest.m in Sources */,
+				040044331D2B7B04008066AC /* RegionModel.m in Sources */,
 				041F01981D28952300BD62E0 /* CommunityVC.m in Sources */,
 				041F01AA1D2895F900BD62E0 /* MatchVC.m in Sources */,
 				041F01A41D2895BF00BD62E0 /* IntroduceVC.m in Sources */,
 				043359331D29048F00D0616E /* QHJRequestDataTools.m in Sources */,
+				04CB17B71D2C65F70051735E /* SQSAction.m in Sources */,
 				041F01501D28432900BD62E0 /* main.m in Sources */,
+				04CB17BD1D2C7E9F0051735E /* SQSItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

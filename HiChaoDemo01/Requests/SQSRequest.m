@@ -120,15 +120,125 @@
         
     }];
     
+      
+    
+}
+
+#pragma mark-----请求各国商品信息
++ (void)sendRequestFroGoodsMessage:(void(^)(NSArray *messageArr))complete {
     
     
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
+    
+    NSMutableArray *goodsDataArr = [NSMutableArray array];
+    
+    for (NSInteger i = 1; i < 7; i++) {
+        [manager GET:[NSString stringWithFormat:@"http://api-v2.mall.hichao.com/mall/region/new?region_id=%ld&gc=appstore&gf=iphone&gn=mxyc_ip&gv=6.6.3&gi=282DC040-8A37-4D6D-92A1-55AC237988B1&gs=640x1136&gos=8.4&access_token=",(long)i] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            NSDictionary *dataDic = dic[@"data"];
+            RegionModel *model = [RegionModel createRegionModelWith:dataDic];
+            
+
+            [goodsDataArr addObject:model];
+            
+            if (i==6 && complete) {
+                
+                complete(goodsDataArr);
+            }
+            
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            NSLog(@"%@",error.localizedDescription);
+            
+        }];
+        
+    }
+    
+}
+#pragma mark----请求collectionView的数据
++ (void)sendRequestFroCollectionViewData:(void(^)(NSArray *dataArr))complete {
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
+    manager.requestSerializer.timeoutInterval = 10.f;
+    [manager GET:@"http://api-v2.mall.hichao.com/sku/list?more_items=1&type=selection&flag=90246&gc=appstore&gf=iphone&gn=mxyc_ip&gv=6.6.3&gi=282DC040-8A37-4D6D-92A1-55AC237988B1&gs=640x1136&gos=8.4&access_token" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        if (responseObject) {
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        
+        NSDictionary *dataDic =dic[@"data"];
+        NSArray *itemsArr = dataDic[@"items"];
+        
+        NSMutableArray *dataArray = [NSMutableArray array];
+        for (NSDictionary *dic in itemsArr) {
+            NSDictionary *componentDic = dic[@"component"];
+            SQSComponent *model =[SQSComponent modelObjectWithDictionary:componentDic];
+            [dataArray addObject:model];
+            
+            
+        }
+            if (complete) {
+                
+                complete(dataArray);
+            }
+        
+    }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error.localizedDescription);
+        
+    }];
+  }
+
+#pragma mark------请求collectionView的头的标题
++ (void)sendRequestFrocollectionViewHeaderTitile:(void(^)(NSArray *titleArr))complete {
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
+    [manager GET:@"http://api-v2.mall.hichao.com/region/detail/goods-nav?region=0&gc=appstore&gf=iphone&gn=mxyc_ip&gv=6.6.3&gi=282DC040-8A37-4D6D-92A1-55AC237988B1&gs=640x1136&gos=8.4&access_token=" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (responseObject) {
+          
+        NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        
+        NSDictionary *dataDic = dic[@"data"];
+        NSArray *itemsArr = dataDic[@"items"];
+        NSMutableArray *titleArr = [NSMutableArray array];
+        for (NSDictionary *dic in itemsArr) {
+            SQSItems *titlemodel = [SQSItems modelObjectWithDictionary:dic];
+            
+            NSLog(@"%@",titlemodel.navName);
+            [titleArr addObject:titlemodel];
+            
+        }
+        
+            if (complete) {
+                
+                complete(titleArr);
+            }
+        
+        
+     }
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error.localizedDescription);
+        
+    }];
     
     
     
     
     
 }
-
 
 
 @end
